@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html  xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable = yes" />
+    <title>盈贝商城</title>
+ 	<style type="text/css">
+		.toolbar {
+			-webkit-box-sizing: border-box;
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 1000;
+			padding: 0 10px;
+			overflow: hidden;
+			width: 100%;
+			background: #FFFFFF; 
+		}
+	</style>
+	<link rel="stylesheet" href="./css/common.css?v=-e7bb704"/>
+	<link rel="stylesheet" href="./css/main.css?v=-3a95a9a" />
+</head>
+<body style=" width:100%; margin-top: 0px; padding-top: 0px; align-content:center">
+	<form id="form1" runat="server">
+		<div class="toolbar">
+			<nav>
+				<div class="nav">
+				  <div class="loginOut">
+					<span onclick ="window.open('./entrance/login.aspx')">退出</span>
+				  </div>
+				  <p class="navCenter"></p>
+				  <div class="navRight">
+					<div class="qrCode">
+					  <a href ="./Customs/myqrcode.aspx"><img src="./images/qrCode.png?v=-fa870c4" class="qrCodeImg" alt=""/></a>
+					</div>
+					<div class="qrCode">
+					  <a href ="./Entrance/register.aspx"><img src="./images/register.png?v=-fa870c4" class="qrCodeImg" alt=""/></a>
+					</div>
+					<div class="service">
+					  <a href ="./Customs/customer_service.aspx"><img src="./images/service.png?v=-7a3ecf0" class="serviceImg" alt=""/></a>
+					</div>
+				  </div>
+				</div>
+			</nav>
+			<div class="wrap">
+			  <div class="title">
+<!-- 				<p class="left">会员号</p> -->
+				<div class="right" runat ="server"><%=sUserName%></div>
+			  </div>
+			</div>
+			<div class="menu">
+			  <div class="menuItem warehouse">
+				<div class="menuItemImg">
+				  <a href= "./wallet/funds_mgr.aspx"><img src="./images/warehouse.png?v=-8d4d023" alt=""/></a>
+				</div>
+				<span>资金管理</span>
+			  </div>
+			  <div class="menuItem warehouse">
+				<div class="menuItemImg">
+				  <a href= "./customs/lockedReceipt.aspx"><img src="./images/trade.png?v=-8d4d023" alt=""/></a>
+				</div>
+				<span>交易管理</span>
+			  </div>			 
+			  <div class="menuItem order">
+				<div class="menuItemImg">
+				  <a href= "./customs/unpickGoods.aspx"><img src="./images/order.png?v=-449ff88" alt=""/></a>
+				</div>
+				<span>提货管理</span>
+			  </div>
+			  <div class="menuItem identification">
+				<div class="menuItemImg">
+				  <img src="./images/identification.png?v=-cb6f59a" alt=""/>
+				</div>
+				<span>实名认证</span>
+				<!--div class="unIdent">未认证</!--div>-->
+			  </div>
+			</div>
+		</div>
+		<div style =" width:100%;height:200px;"></div>
+		<div>
+			<img class="noticeImg" src="./images/banner.jpg" style =" width:100%;height:auto;" alt=""/>			
+			<img class="noticeImg" src="./images/notice.png" style =" width:10%;height:30px;" alt=""/>
+			<span class="notice_title">平台公告</span>
+			<div id="notice_text" runat="server" style =" width:100%;"></div>
+		</div>
+		<div>
+			<p class="itemTitle">商品专区</p>
+			<div style="width: 100%; margin: auto; background-color:#fff;">
+				<a href ="./Commodity/product/page/beihun.aspx?g=0100000000001001&b=C010100010001000"><img src="./Commodity/product/Images/贝魂.jpg" alt="beihun" style="width:100%; "/></a>
+			</div>
+			<div style="width: 100%; margin: auto; background-color:#fff;">
+				<a href ="./Commodity/product/page/yuanhe.aspx?g=0100000000001002&b=C010100010001000"><img src="./Commodity/Product/Images/元和坊.jpg" alt="yuanhe" style="width:100%; "/></a>
+			</div>
+			<div style="width: 100%; margin: auto; background-color:#fff;">
+				<a href ="./Commodity/product/page/honggu.aspx?g=0100000000001003&b=C010100010001000"><img src="./Commodity/Product/Images/红菇.jpg" alt="yuanhe" style="width:100%; "/></a>
+			</div>
+			<div style="width: 100%; margin: auto; background-color:#fff;">
+				<a href ="./Commodity/product/page/heimur.aspx?g=0100000000001004&b=C010100010001000"><img src="./Commodity/Product/Images/黑木耳.jpg" alt="yuanhe" style="width:100%; "/></a>
+			</div>
+		</div>
+	</form>
+</body>
+</html>
