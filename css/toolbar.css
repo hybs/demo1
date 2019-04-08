@@ -1,0 +1,108 @@
+﻿.loginOut {
+	width: 2rem;
+	height: .88rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	padding-left: .3rem;
+	box-sizing: border-box
+}
+
+.qrCode, .service, .title {
+	display: flex;
+	flex-direction: row;
+	box-sizing: border-box
+}
+
+.loginOut span {
+	font-size: .3rem;
+	color: #000;
+	font-weight: 500
+}
+
+.qrCode {
+	margin-right: .1rem
+}
+
+.qrCode, .service {
+	height: .88rem;
+	padding: 0 .2rem;
+	align-items: center
+}
+
+.qrCodeImg, .serviceImg {
+	width: .4rem;
+	height: .4rem
+}
+
+.title {
+	width: 100%;
+	height: 1.1rem;
+	padding: 0 .3rem;
+	justify-content: space-between;
+	align-items: baseline
+}
+
+.title .left {
+	height: 1.1rem;
+	line-height: 1.1rem;
+	font-size: .3rem;
+	color: #000;
+	font-weight: 800
+}
+
+.title .right {
+	font-size: .3rem;
+	color: #000;
+	font-weight: 700
+}
+.toolbar {
+	-webkit-box-sizing: border-box;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	padding: 0 10px;
+	overflow: hidden;
+	width: 100%;
+	background: #FFFFFF;
+}
+.am-header {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	width: 100%;
+	position: relative;
+	padding: 7px 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	background: #1D222D;
+	height: 50px;
+	text-align: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+}
+.am-header h1 {
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	line-height: 18px;
+	text-align: center;
+	font-size: 18px;
+	font-weight: 300;
+	color: #fff;
+}
+.buttonBox {
+	position: relative
+}
+.button {
+	display: block;
+	margin: .96rem auto 0;
+	background: #29B1FD;
+	font-size: .32rem;
+	color: #fff;
+	border-radius: .44rem;
+	box-sizing: border-box;
+	z-index: 1
+}
