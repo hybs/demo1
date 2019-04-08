@@ -1,0 +1,78 @@
+﻿body, html {
+	height: 100%;
+	background: #fff
+}
+
+.wrap {
+	padding-top: 1.44rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center
+}
+
+.logo {
+	display: block;
+	margin: .26rem auto .4rem;
+	width: 3.02rem;
+	height: 3.02rem
+}
+
+.android > span, .ios > span {
+	font-size: .32rem;
+	margin-left: .3rem
+}
+
+.appName {
+	height: .44rem;
+	line-height: .44rem;
+	color: #333;
+	font-size: .32rem;
+	text-align: center;
+	font-weight: 700;
+	margin-bottom: 2.4rem
+}
+
+.downloadItem {
+	width: 6.3rem;
+	height: 1rem;
+	border-radius: .1rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	box-sizing: border-box;
+	padding-left: 1.54rem
+}
+
+.android {
+	background: #fff;
+	margin-bottom: .5rem;
+	border: 1px solid #101010
+}
+
+	.android > span {
+		color: #101010
+	}
+
+.androidImg {
+	width: .44rem;
+	height: .56rem
+}
+
+.ios {
+	background: #101010;
+	margin-bottom: 1.6rem
+}
+
+	.ios > span {
+		color: #fff
+	}
+
+.iosImg {
+	width: .39rem;
+	height: .47rem
+}
+
+.bottomText {
+	width: 4.32rem;
+	height: .26rem
+}
