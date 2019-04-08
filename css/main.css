@@ -352,6 +352,12 @@
 	vertical-align:middle
 }
 
+#notice_text {
+	margin: 4px;
+	padding: 4px;
+	border: 1px #999 solid
+	}
+
 .notice_content {
 	width: 4.88rem;
 	height: .33rem;
