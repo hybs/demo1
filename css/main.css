@@ -53,13 +53,14 @@
 	line-height: 1.1rem;
 	font-size: .3rem;
 	color: #000;
-/*	font-weight: 800*/
+	font-weight: 800
 }
 
 .title .right {
 	font-size: .3rem;
 	color: #000;
 /*	font-weight: 700*/
+	width: 100%;
 	text-align: right;
 }
 
