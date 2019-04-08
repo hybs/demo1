@@ -59,9 +59,8 @@
 .title .right {
 	font-size: .3rem;
 	color: #000;
-	font-weight: 700;
-	width: 100%;
-	text-align: right;
+/*	font-weight: 700*/
+	text-align: right; 
 }
 
 .banner {
