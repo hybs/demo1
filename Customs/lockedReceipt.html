@@ -1,0 +1,94 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Customs/MasterPage1.master" AutoEventWireup="true" CodeFile="lockedReceipt.aspx.cs" Inherits="Customs_lockedReceipt" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<link href="css/header.css" rel="Stylesheet" type="text/css" />
+	<style  type="text/css">
+		body {
+			font-size:12px;
+		}
+		.buttonBox {
+		position: relative
+		}
+
+		.button {
+			display:block;
+			text-align: center;
+			font-size: 20px;
+			font-weight: 400;
+			width:90%;
+			height:40px;
+			color: #fff;
+			border-radius: 2rem;
+			box-sizing: border-box;
+			z-index: 1;
+			background: #29B1FD;
+			margin: .96rem .96rem .96rem .96rem;
+		}
+	</style>
+	<script>
+		 function checkClint()
+		{
+			var sNameText = document.getElementById("nameText");
+			var sTelText = document.getElementById("telText");
+			var sAddrText = document.getElementById("addrText");
+ 
+			if (sNameText.value == "") {
+				alert('请输入收件人姓名！');
+				sNameText.focus();
+				return false;
+			} else if (sTelText.value == "") {
+				alert('请输入收件人电话号码！');
+				sTelText.focus();
+				return false;
+			} else if (sAddrText.value == "") {
+				alert('请输入收件人地址！');
+				sAddrText.focus();
+				return false;
+			}else
+			{
+				return true;
+			}
+		} 
+	</script>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<header class="header">
+		<h1>锁仓仓单</h1>
+	</header>
+	<div id ="SoptApply" class="buttonBox" runat="server">
+		<asp:Button class="button" ID="Button2" runat="server" OnClick="Spot_Click" Text="提货申请" />  
+	</div>
+	<div id ="address" runat="server" style="display:none" >
+		<div  class="item" style ="height:30px;">
+			<span class="area" style ="width:20%">联 系 人：</span>
+			<asp:TextBox ID="nameText" runat="server"></asp:TextBox>
+		</div>
+		<div class="item"  style ="height:30px;">
+			<span class="itemTitle" style ="width:20%">联系电话：</span>
+			<asp:TextBox ID="telText" runat="server" ></asp:TextBox>
+		</div>
+		<div class="item"  style ="height:30px;">
+			<span class="itemTitle" style ="width:20%">收货地址：</span>
+			<asp:TextBox ID="addrText" runat="server" Width="80%" ></asp:TextBox>
+		</div>
+		<div class="item" style ="height:30px;">
+			<span class="itemTitle">邮寄费用：</span>
+			<asp:TextBox ID="TextBox1" runat="server" placeholder="单件6元" ReadOnly="True" ></asp:TextBox>
+		</div>
+		<div class="item" style ="height:30px;">
+			<span class="itemTitle">产品代号：</span>
+			<asp:TextBox ID="groupText" runat="server" placeholder="产品前面的红色号码" OnTextChanged="Num_changed" AutoPostBack = "true"></asp:TextBox>
+		</div>
+		<div id ="Promit"  runat="server"  style="display:none; font-size:16px" ></div>
+		<div>
+			<p><asp:Label ID="Label1" runat ="server"/></p>
+		</div>
+		<div class="buttonBox">
+			<asp:Button class="button" ID="Button1" runat="server" OnClientClick="return checkClint()"  OnClick="Comform_Click" Text="确定提货" />  
+		</div>
+	</div>
+
+	<div id ="lockgoodslist"  runat="server"  style="background-color:lightgray;"></div>
+</asp:Content>
+
+
