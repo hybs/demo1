@@ -28,6 +28,80 @@
 			color:#333;
 /*			text-decoration:none;*/
 		}
+		.btn {
+			line-height:40px;
+			background:#f73e77;
+			border-radius:6px;
+			text-align:center;
+			color:white	
+		}
+		
+		
+		
+		ul {
+            margin: 0;
+            padding: 0;
+
+        }
+        .clearfloat {
+            zoom: 1;
+        }
+        .clearfloat::after {
+            display: block;
+            clear: both;
+            content: "";
+            visibility: hidden;
+            height: 0;
+        }
+
+        .tab-list {
+            position: relative;
+        }
+
+        .tab-list .tab-itom {
+            float: left;
+            list-style: none;
+            margin-right: 4px;
+        }
+
+        .tab-itom .test-label {
+            position: relative;
+            display: block;
+            width: 80px;
+            height: 27px;
+            border: 1px solid transparent;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            line-height: 27px;
+            text-align: center;
+            background: #e7e8eb;
+        }
+
+        .tab-itom .tab-box {
+            position: absolute;
+            left: 0;
+            top: 28px;
+            width: 100%;
+            height: 580px;
+            border: 1px solid #cbcccc;
+            border-radius: 5px;
+            border-top-left-radius: 0px;
+            background: #fff;
+            z-index: 0;
+        }
+        input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+        }
+        input[type="radio"]:checked + .test-label {
+            border-color: #cbcccc;
+            border-bottom-color: #fff;
+            background: #fff;
+            z-index: 10;
+        }
+        input[type="radio"]:checked ~ .tab-box {
+            z-index: 5;
+        }
 	</style>
 	<script>
 		 function checkClint()
@@ -57,19 +131,56 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div id="main" style="font-size:18px; font-family:Verdana; width:100%">
-        <table  style=" width:100%">
-            <tr  style=" width:100%;text-align:center">
-                <td style=" width:25%"><a href="lockedReceipt.aspx">锁单中</a></td>
-                <td style=" width:25%"><a href="cansellReceipt.aspx">可挂卖</a></td>
-                <td style=" width:25%"><a href="selloutReceipt.aspx">买入明细</a></td>
-                <td style=" width:25%"><a href="">卖出明细</a></td>
-            </tr>
-        </table>
+        <ul class="tab-list clearfloat">
+            <li class="tab-itom">
+                <input type="radio" id="testTabRadio1" class="test-radio" name="tab" checked="checked">
+                <label class="test-label" for="testTabRadio1">锁单中</label>
+                <div class="tab-box"><br>
+                    <div class="btn">锁仓单</div><br>
+                    <div id ="lockgoodslist"  runat="server" style="text-align:center;margin-top:30px">
+                        <img src="./images/no.png" />
+                        <p>暂无仓单</p>
+                    </div>
+                </div>
+            </li>
+            <li class="tab-itom">
+                <input type="radio" id="testTabRadio2" class="test-radio" name="tab">
+                <label class="test-label" for="testTabRadio2">可挂卖</label>
+                <div class="tab-box"><br>
+                    <div class="btn">可挂卖</div><br>
+                    <div id ="lockgoodslist"  runat="server" style="text-align:center;margin-top:30px">
+                        <img src="./images/no.png" />
+                        <p>暂无可挂卖仓单</p>
+                    </div>
+
+                </div>
+            </li>
+            <li class="tab-itom">
+                <input type="radio" id="testTabRadio3" class="test-radio" name="tab">
+                <label class="test-label" for="testTabRadio3">买入明细</label>
+                <div class="tab-box"><br>
+                    <div class="btn">买入明细</div><br>
+               		<div id ="lockgoodslist"  runat="server" style="text-align:center;margin-top:30px">
+                        <img src="./images/no.png" />
+                        <p>暂无记录</p>
+                    </div>
+                </div>
+            </li>
+            <li class="tab-itom">
+                <input type="radio" id="testTabRadio4" class="test-radio" name="tab">
+                <label class="test-label" for="testTabRadio4">卖出明细</label>
+                <div class="tab-box"><br>
+                    <div class="btn">卖出明细</div><br>
+                    <div id ="lockgoodslist"  runat="server" style="text-align:center;margin-top:30px">
+                        <img src="./images/no.png" />
+                        <p>暂无记录</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
     </div>
 
-	<header class="header">
-		<h1>锁仓仓单</h1>
-	</header>
+
 	<div id ="SoptApply" class="buttonBox" runat="server" style="display:none">
 		<asp:Button class="button" ID="Button2" runat="server" OnClick="Spot_Click" Text="提货申请" />  
 	</div>
@@ -102,10 +213,6 @@
 			<asp:Button class="button" ID="Button1" runat="server" OnClientClick="return checkClint()"  OnClick="Comform_Click" Text="确定提货" />  
 		</div>
 	</div>
-	<div id ="lockgoodslist"  runat="server" style="text-align:center;margin-top:30px">
-    	<img src="./images/no.png" />
-    	<p>暂无仓单</p>
-    </div>
 </asp:Content>
 
 
