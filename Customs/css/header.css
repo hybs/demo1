@@ -3,10 +3,13 @@
 	display: -ms-flexbox;
 	width: 100%;
 	position: relative;
-	padding: 7px 0;
+/*	padding: 7px 0;*/
+	margin: 8px 0;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
-	background: #0094ff;
+/*	background: #0094ff;*/
+	background: #ef861b;
+	border-radius: 6px;	
 	height: 50px;
 	text-align: center;
 	-webkit-box-pack: center;
@@ -18,9 +21,20 @@
 	.header h1 {
 		-webkit-box-flex: 1;
 		-ms-flex: 1;
-		line-height: 18px;
+/*		line-height: 18px;*/
 		text-align: center;
 		font-size: 18px;
 		font-weight: 300;
 		color: #ffffff;
 	}
+
+/*.header h1 {
+	height: 50px;
+	line-height: 50px;
+	text-align:center;
+	font-size: 18px;
+	font-weight: 300;
+	color: #fff;
+	background: #ef861b;
+	border-radius: 6px;	
+}*/

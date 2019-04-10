@@ -1,5 +1,6 @@
 ﻿<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 	<meta name="viewport" content="width=devie-width,initial-scale=1,user-scalable=no">
+    <title>交易管理</title>
 	<link href="css/header.css" rel="Stylesheet" type="text/css" />
 	<style  type="text/css">
 		body {
@@ -22,6 +23,10 @@
 			z-index: 1;
 			background: #29B1FD;
 			margin: .96rem .96rem .96rem .96rem;
+		}
+		table a {
+			color:#333;
+/*			text-decoration:none;*/
 		}
 	</style>
 	<script>
@@ -51,10 +56,21 @@
 	</script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <div id="main" style="font-size:18px; font-family:Verdana; width:100%">
+        <table  style=" width:100%">
+            <tr  style=" width:100%;text-align:center">
+                <td style=" width:25%"><a href="lockedReceipt.aspx">锁单中</a></td>
+                <td style=" width:25%"><a href="cansellReceipt.aspx">可挂卖</a></td>
+                <td style=" width:25%"><a href="selloutReceipt.aspx">买入明细</a></td>
+                <td style=" width:25%"><a href="">卖出明细</a></td>
+            </tr>
+        </table>
+    </div>
+
 	<header class="header">
 		<h1>锁仓仓单</h1>
 	</header>
-	<div id ="SoptApply" class="buttonBox" runat="server">
+	<div id ="SoptApply" class="buttonBox" runat="server" style="display:none">
 		<asp:Button class="button" ID="Button2" runat="server" OnClick="Spot_Click" Text="提货申请" />  
 	</div>
 	<div id ="address" runat="server" style="display:none" >
@@ -86,8 +102,10 @@
 			<asp:Button class="button" ID="Button1" runat="server" OnClientClick="return checkClint()"  OnClick="Comform_Click" Text="确定提货" />  
 		</div>
 	</div>
-
-	<div id ="lockgoodslist"  runat="server"  style="background-color:lightgray;"></div>
+	<div id ="lockgoodslist"  runat="server" style="text-align:center;margin-top:30px">
+    	<img src="./images/no.png" />
+    	<p>暂无仓单</p>
+    </div>
 </asp:Content>
 
 
