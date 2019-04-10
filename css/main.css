@@ -152,7 +152,8 @@
 	font-size: .34rem;
 	line-height: .48rem;
 	color: #000;
-	font-weight: 700
+	font-weight: 700;
+	background:white;
 }
 
 .capital {
