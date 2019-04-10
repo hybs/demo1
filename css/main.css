@@ -146,7 +146,7 @@
 
 .itemTitle {
 	width: 100%;
-	height: .48rem;
+	height: .60rem;
 	box-sizing: border-box;
 	padding-left: .3rem;
 	font-size: .34rem;
@@ -356,6 +356,7 @@
 #notice_text {
 	border: 1px #ef861b solid;
 	border-radius: 6px;
+	padding:4px;
 }
 
 .notice_content {
