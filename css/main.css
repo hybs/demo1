@@ -356,7 +356,8 @@
 #notice_text {
 	border: 1px #ef861b solid;
 	border-radius: 6px;
-	}
+	padding:4px;
+}
 
 .notice_content {
 	width: 4.88rem;
