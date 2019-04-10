@@ -8,7 +8,7 @@
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 /*	background: #0094ff;*/
-	background: #ef861b;
+	background: #f73e77;
 	border-radius: 6px;	
 	height: 50px;
 	text-align: center;
@@ -27,14 +27,3 @@
 		font-weight: 300;
 		color: #ffffff;
 	}
-
-/*.header h1 {
-	height: 50px;
-	line-height: 50px;
-	text-align:center;
-	font-size: 18px;
-	font-weight: 300;
-	color: #fff;
-	background: #ef861b;
-	border-radius: 6px;	
-}*/
