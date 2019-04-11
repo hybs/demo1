@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+  <meta charset="UTF-8"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="yes" name="apple-touch-fullscreen"/>
+  <meta content="telephone=no,email=no" name="format-detection"/>
+  <meta name="screen-orientation" content="portrait"/>
+  <meta name="x5-orientation" content="portrait"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta http-equiv="expires" content="0"/>
+  <meta http-equiv="pragma" content="no-cache"/>
+  <meta http-equiv="Cache-control" content="no-cache"/>
+  <meta http-equiv="Cache" content="no-cache"/>
+  <meta name="wap-font-scale" content="no"/>
+  <title>注册</title>
+  <link rel="stylesheet" href="./css/common.css?v=-e7bb704"/>
+  <link rel="stylesheet" href="./css/register.css?v=-672076c"/>
+
+</head>
+<body style=" width:100%; margin-top: 0px; padding-top: 0px; align-content:center">
+	<form id="form1" runat="server">
+		<div class="wrap">
+			<nav>
+				<div class="nav" style="border-bottom: none">
+				  <div class="toLogin">
+					<img class="backImg" src="./images/naviBack.png?v=-00a2d59" alt=""/>
+				  </div>
+				  <p class="navCenter"></p>
+				  <div class="navRight"></div>
+				</div>
+			</nav>
+			<img src="./images/logo.png?v=-5572384" class="logo" alt=""/>
+			<div class="headerTitle">
+				<h1>注册</h1>
+				<h2>欢迎新用户，我们等你好久啦！</h2>
+				<p><asp:Label ID="Prompt" runat ="server"/></p>
+			</div>
+			<div class="item">
+				<span class="area">+86</span>
+				<asp:TextBox ID="nameText" runat="server" placeholder="请输入手机号码"></asp:TextBox>
+			</div>
+			<div class="item" style="display: none">
+				<span class="itemTitle">验证码</span>
+				<input id="registerCode" type="text" placeholder="请输入验证码"/>
+				<div class="button-verification-code" id="getCode">获取验证码</div>
+			</div>
+
+			<div class="item">
+				<span class="itemTitle">登录密码</span>
+				<asp:TextBox ID="pswText1" runat="server" placeholder="6-32位任意字符" TextMode="Password"></asp:TextBox>
+				<div class="showPsd" data-state="0">
+					<img class="hide" src="./images/hidePsw.png?v=-0f48970" alt=""/>
+					<img class="show" src="./images/showPsw.png?v=-1d77443" alt=""/>
+				</div>
+			</div>
+			<div class="item">
+				<span class="itemTitle">登录密码</span>
+				<asp:TextBox ID="pswText2" runat="server" placeholder="6-32位任意字符" TextMode="Password"></asp:TextBox>
+				<div class="showPsd" data-state="0">
+					<img class="hide" src="./images/hidePsw.png?v=-0f48970" alt=""/>
+					<img class="show" src="./images/showPsw.png?v=-1d77443" alt=""/>
+				</div>
+			</div>
+			<div class="item">
+				<span class="itemTitle">交易密码</span>
+				<asp:TextBox ID="withpsw" runat="server" placeholder="6-18位数字、字母组合" TextMode="Password"></asp:TextBox>
+				<div class="showPsd" data-state="0">
+					<img class="hide" src="./images/hidePsw.png?v=-0f48970" alt=""/>
+					<img class="show" src="./images/showPsw.png?v=-1d77443" alt=""/>
+				</div>
+			</div>
+			<div class="item">
+				<span class="itemTitle">交易密码</span>
+				<asp:TextBox ID="withpsw2" runat="server" placeholder="请再次输入交易密码" TextMode="Password"></asp:TextBox>
+				<div class="showPsd" data-state="0">
+					<img class="hide" src="./images/hidePsw.png?v=-0f48970" alt=""/>
+					<img class="show" src="./images/showPsw.png?v=-1d77443" alt=""/>
+				</div>
+			</div>
+			<div class="buttonBox">
+				<asp:Button class="button" ID="Button2" runat="server" OnClick="Register_Click" Text="注册" />  
+				<div class="shadow"></div>
+			</div>
+		</div>
+    </form>
+</body>
+<script type="text/javascript">
+    function checkClint()
+    {
+		var sPsw11 = document.getElementById("pswText1");
+		var sPsw12 = document.getElementById("pswText2");
+
+		var sPsw21 = document.getElementById("withpsw");
+		var sPsw22 = document.getElementById("withpsw2");
+
+		if (sPsw11 != sPsw12) {
+			alert('二次输入的登录密码不一样！');
+			return false;
+		} else if (sPsw21 != sPsw22)
+		{
+			alert('二次输入的交易密码不一样！');
+			return false;
+		}
+		else
+		{
+			return true;
+        }
+	} 
+</script>
+</html>

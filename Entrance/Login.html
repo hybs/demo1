@@ -1,0 +1,79 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="Login" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head> 
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <title>用户登录</title>
+	<link rel="stylesheet" href="./css/common.css?v=-e7bb704"/>
+	<link rel="stylesheet" href="./css/login.css?v=-851d74e"/>
+
+</head>
+<body style="width:100%; margin-top: 0px; padding-top: 0px; align-content:center">
+	<form id="form1" runat="server">
+		<div class="wrap">
+			<nav style="opacity: 0">
+				<div class="nav" style="border-bottom: none">
+					<div class="navLeft navLeftHide">
+						<img class="backImg" src="./images/naviBack.png?v=-00a2d59" alt=""/>
+					</div>
+					<p class="navCenter"></p>
+					<div class="navRight"></div>
+				</div>
+			</nav>
+			<img src="./images/logo.png?v=-5572384" class="logo" alt=""/>
+			<p class="appName">华东现货交易指定商品交易平台</p>
+			<div class="item">
+				<span class="area">+86</span>
+				<asp:TextBox ID="nameText" runat="server" placeholder="只能使用您的手机号码"></asp:TextBox>
+			</div>
+			<div class="item">
+				<span class="itemTitle">密码</span>
+				<asp:TextBox ID="pswText" runat="server" placeholder="6-32位任意字符" TextMode="Password"></asp:TextBox>
+			<div class="showPsd" data-state="0">
+				<img class="hide" src="./images/hidePsw.png?v=-0f48970" alt=""/>
+				<img class="show" src="./images/showPsw.png?v=-1d77443" alt=""/>
+			</div>
+			</div>
+			<div class="buttonBox">
+				<asp:Button class="button" ID="Button2" runat="server" OnClientClick="return checkClint()"  OnClick="Login_Click" Text="登录" />  
+			</div>
+			<div class="buttons">
+				<!--p class="register"><a href="./beforeRegister.html">快速注册</a></!--p>-->
+				<p class="forget"><a href="./forget.aspx">忘记密码?</a></p>
+			</div>
+		</div>
+    </form>
+<script type="text/javascript">
+    function checkClint()
+    {
+		var sName = document.getElementById("nameText");
+		var sPsw = document.getElementById("pswText");
+
+		if (sName.value == "")
+		{
+			alert('请输入电话号码！');
+			sName.focus();
+			return false;
+		}
+/*		else if (isNaN(parseInt(sName)))
+		{
+			alert('请输入正确的电话号码！');
+			sName.focus();
+			return false;
+		} */
+		else if(sPsw.value  == "")
+		{
+			alert('请输入密码！');
+			sPsw.focus();
+			return false;
+		}else
+		{
+			return true;
+        }
+    } 
+</script>
+</body>
+</html>
