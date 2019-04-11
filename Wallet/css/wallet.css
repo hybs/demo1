@@ -1,0 +1,243 @@
+﻿.capital .amountBox .desc, .goodsButton, .modal, .popup-button, .popup-desc, .popup-title, .unIdent {
+	text-align: center
+}
+
+.loginOut {
+	width: 2rem;
+	height: .88rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	padding-left: .3rem;
+	box-sizing: border-box
+}
+
+.loginOut span {
+	font-size: .3rem;
+	color: #000;
+	font-weight: 500
+}
+
+
+.title {
+	width: 100%;
+	height: 1.1rem;
+	padding: 0 .3rem;
+	justify-content: space-between;
+	align-items: baseline
+}
+
+.title .left {
+	height: 1.1rem;
+	line-height: 1.1rem;
+	font-size: .5rem;
+	color: #000;
+	font-weight: 800
+}
+
+.title .right {
+	font-size: .3rem;
+	color: #000;
+	font-weight: 700
+}
+
+.banner {
+	display: block;
+	margin: .08rem auto .32rem;
+	width: 7.02rem
+}
+
+.menu, .menuItem {
+	height: 1.76rem;
+	display: flex
+}
+
+.menu {
+	margin: 0 auto .1rem;
+	width: 6.9rem;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center
+}
+
+.menuItem {
+	width: 1.44rem;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative
+}
+
+.menuItem .menuItemImg, .menuItem .menuItemImg img {
+	display: block;
+	width: .8rem
+}
+
+.menuItem .menuItemImg {
+	height: .8rem;
+	border-radius: .4rem;
+	margin-bottom: .22rem
+}
+
+.menuItem:nth-child(1) .menuItemImg {
+	box-shadow: 0 .08rem .5rem 0 rgba(208,59,227,.3)
+}
+
+.menuItem:nth-child(2) .menuItemImg {
+	box-shadow: 0 .08rem .5rem 0 rgba(255,165,80,.3)
+}
+
+.menuItem:nth-child(3) .menuItemImg {
+	box-shadow: 0 .08rem .5rem 0 rgba(9,172,193,.3)
+}
+
+.menuItem:nth-child(4) .menuItemImg {
+	box-shadow: 0 .08rem .5rem 0 rgba(245,79,113,.3)
+}
+
+.menuItem span {
+	height: .34rem;
+	line-height: .34rem;
+	font-size: .24rem;
+	color: #000;
+	font-weight: 400
+}
+
+.unIdent {
+	display: none;
+	position: absolute;
+	top: .36rem;
+	left: .94rem;
+	width: .8rem;
+	height: .28rem;
+	border-radius: .14rem;
+	background: #FF6272;
+	line-height: .28rem;
+	color: #fff;
+	font-size: .2rem
+}
+.itemTitle {
+	width: 100%;
+	height: .48rem;
+	box-sizing: border-box;
+	padding-left: .3rem;
+	font-size: .34rem;
+	line-height: .48rem;
+	color: #000;
+	font-weight: 700
+}
+
+.capital {
+	width: 6.9rem;
+	height: 3.9rem;
+	background: url(../images/index/bg.jpg?v=-6a2d823) no-repeat;
+	background-size: 100% 100%;
+	margin: .32rem auto .48rem;
+	box-shadow: 0 .02rem .2rem 0 rgba(115,115,115,.15);
+	border-radius: .16rem
+}
+
+.capital .amountBox {
+	width: 6.9rem;
+	height: 2.32rem;
+	padding-top: .68rem;
+	box-sizing: border-box
+}
+
+.capital .amountBox .sumAmount {
+	text-align: center;
+	height: .84rem;
+	margin-bottom: .2rem;
+	font-size: .6rem;
+	line-height: .84rem;
+	color: #FE2E3F;
+	font-weight: 700
+}
+
+.capital .amountBox .sumAmount .unit {
+	font-size: .4rem
+}
+
+.capital .amountBox .desc {
+	height: .42rem;
+	font-size: .3rem;
+	line-height: .42rem;
+	color: #333;
+	font-weight: 500
+}
+.buttonBox {
+	position: relative
+}
+
+.button {
+	display: block;
+	margin: .96rem auto 0;
+	background: #29B1FD;
+	font-size: .32rem;
+	color: #fff;
+	border-radius: .44rem;
+	box-sizing: border-box;
+	z-index: 1
+}
+.buttons {
+	align-items: center;
+	justify-content: space-between;
+	padding: .44rem .44rem 0
+}
+
+.button span {
+	font-size: .3rem;
+	color: #fff;
+	font-weight: 500
+}
+
+.button.recharge {
+	background: 0 0;
+	border: 1px solid #FE532A
+}
+
+.button.recharge span {
+	color: #FE532A
+}
+
+.shadow {
+	position: absolute;
+	top: .44rem;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 2.57rem;
+	height: .86rem;
+	background: linear-gradient(90deg,rgba(255,163,89,1) 0,rgba(255,92,117,1) 100%);
+	border-radius: .43rem;
+	filter: blur(.1rem);
+	-webkit-filter: blur(.1rem);
+	z-index: 0
+}
+
+.header {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	width: 100%;
+	position: relative;
+	padding: 7px 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	background: #0094ff;
+	height: 50px;
+	text-align: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+}
+
+.header h1 {
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	line-height: 18px;
+	text-align: center;
+	font-size: 18px;
+	font-weight: 300;
+	color: #ff0000;
+}

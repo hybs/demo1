@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="yes" name="apple-touch-fullscreen">
+  <meta content="telephone=no,email=no" name="format-detection">
+  <meta name="screen-orientation" content="portrait">
+  <meta name="x5-orientation" content="portrait">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="wap-font-scale" content="no"/>
+  <title>提现</title>
+  <link rel="stylesheet" href="css/common.css?v=-e7bb704">
+  <link rel="stylesheet" href="css/withdrawal.css?v=-d69e07e">
+</head>
+<body>
+	<form id="form1" runat="server">
+		<nav class="header">
+		  <div class="nav">
+			<div class="navLeft">
+			  <a href ="../entrance/login.aspx"><img class="backImg" src="../images/naviBack.png?v=-00a2d59" alt=""></a>
+			</div>
+			<p class="navCenter"></p>
+			<div class="navRight">
+			  <div class="detail">提现明细</div>
+			</div>
+		  </div>
+		</nav>
+		<div id="mainContent">
+			<p class="pageTitle">提现</p>
+			<div class="amountBox">
+			  <div class="boxFooter">
+				<span class="allAmount">可用资金：￥<span class="amount"><%=sFound %></span></span>
+			  </div>
+			  <div class="boxFooter">
+				<span class="itemValue mobile"><%=sPromit %></span>
+			  </div>
+			  <p class="title">提现金额（元)</p>
+			  <div class="amountInput">
+				<span>￥</span>
+				<asp:TextBox ID="WithdrawNum" runat="server" ></asp:TextBox>
+			  </div>
+			</div>
+			<div class="cashInfo">
+			   <div class="item">
+				<span class="itemTitle">开户行名称</span>
+				<span class="itemValue cashNo"><%=sBankName %></span>
+			  </div>
+			  <div class="item">
+				<span class="itemTitle">银行卡号</span>
+				<span class="itemValue cashNo"><%=sBankNo %></span>
+			  </div>
+			  <div class="item">
+				<span class="itemTitle">收款人姓名</span>
+				<span class="itemValue cashName"><%=sUserName%></span>
+			  </div>
+			  <div class="item">
+				<span class="itemTitle">交易密码</span>
+				<asp:TextBox ID="password" runat="server" placeholder="请输入交易密码" TextMode="Password"></asp:TextBox>
+				<div class="showPsd" data-state="0">
+				  <i></i>
+				  <img class="hide" src="../images/hidePsw.png?v=-0f48970" alt="">
+				  <img class="show" src="../images/showPsw.png?v=-1d77443" alt="">
+				</div>
+			  </div>
+			</div>
+			<div class="buttonBox">
+					<asp:Button class="button" ID="Button2" runat="server" onclick="Withdraw_Click" Text="提交申请" />  
+					<div class="shadow"></div>
+			</div>
+			<div class="desc">
+			  <span class="descLeft">提现说明：</span>
+			  <div class="descRight">
+				<p>1、每笔提现金额不低于100元</p>
+				<p>2、每笔提现需收取0.6%手续费</p>
+			  </div>
+			</div>
+		</div>
+	</form>
+</body>
+</html>

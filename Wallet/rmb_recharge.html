@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="yes" name="apple-touch-fullscreen">
+  <meta content="telephone=no,email=no" name="format-detection">
+  <meta name="screen-orientation" content="portrait">
+  <meta name="x5-orientation" content="portrait">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="wap-font-scale" content="no"/>
+  <title>认购</title>
+  <link rel="stylesheet" href="css/common.css?v=-e7bb704">
+  <link rel="stylesheet" href="css/recharge.css?v=-32406a8">
+</head>
+<body style="background: #fff;">
+	<form id="form1" runat="server">
+		<nav class="header">
+		  <div class="nav">
+			<div class="toIndex">
+			  <a href ="../entrance/login.aspx"><img class="backImg" src="../images/naviBack.png?v=-00a2d59" alt=""></a>
+			</div>
+			<p class="navCenter"></p>
+			<div class="navRight">
+			  <div class="detail">认购明细</div>
+			</div>
+		  </div>
+		</nav>
+		  <div id="mainContent">
+			<div id="scroller">
+			  <p class="pageTitle">认购</p>
+			  <div class="amountBox">
+				<p class="title">认购金额（元)</p>
+				<div class="amountInput">
+					<span>￥</span>
+					<asp:TextBox ID="amountText" runat="server" ></asp:TextBox>
+				</div>
+			  </div>
+			  <div class="cashInfo">
+				<div class="item">
+				  <span class="itemTitle">认购帐号</span>
+				  <span class="itemValue mobile"><%=sUserName %></span>
+				</div>
+			  </div>
+			  <div class="cashInfo">
+				<div class="payItem">
+				  <span class="payItemTitle" style="font-weight: 500">支付方式</span>
+				</div>
+				<div class="payItem">
+				  <span class="payItemTitle">支付宝</span>
+				  <img class="selectImg" src="../images/checkBox_checked.png?v=-dfcf590" alt="">
+				</div>
+			  </div>
+			  <div class="buttonBox">
+					<asp:Button class="button" ID="Button2" runat="server" onclick= "Pay_Click" Text  ="确认支付" />
+					<div class="shadow"></div>
+			  </div>
+			</div>
+		  </div>
+	</form>
+</body>
+</html>

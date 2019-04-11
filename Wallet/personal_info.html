@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <title></title>
+	<style  type="text/css">
+		.am-header  {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			width: 100%;
+			position: relative;
+			padding: 0px;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			background: #f73e77;
+			height: 50px;
+			text-align: center;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			left: 0px;
+			top: 0px;
+		}
+		.am-header h1 {
+			-webkit-box-flex: 1;
+			-ms-flex: 1;
+			line-height: 18px;
+			text-align: center;
+			font-size: 18px;
+			font-weight: 300;
+			color: #fff;
+		}
+		.line_button {
+			text-align: center;
+			font-size: 40px;
+			font-weight: 900;
+			width:100%;
+			height:50px;
+			color: #f00;
+		}
+		.line_promit {
+			text-align: center;
+			font-size: 20px;
+			font-weight: 500;
+			width:100%;
+			height:30px;
+			color: #f73e77;
+		}
+		.button10 {
+			display:block;
+			text-align: center;
+			font-size: 30px;
+			font-weight: 500;
+			width:90%;
+			height:45px;
+			color: #fff;
+			border-radius: 2rem;
+			box-sizing: border-box;
+			z-index: 1;
+			background: #f73e77;
+			margin: .96rem .96rem .96rem .96rem;
+		}
+		a, button {
+			cursor: pointer;
+			text-decoration: none
+		}
+		.title {
+			width: 80%;
+			height: 1.1rem;
+			padding: 1rem;
+			justify-content: space-between;
+			align-items: baseline
+		}
+
+		.title .left {
+			height: 1.1rem;
+			line-height: 1.1rem;
+			font-size: 20px;
+			color: #000;
+			font-weight: 500;
+			float:left
+		}
+
+		.title .right {
+			font-size: 20px;
+			color: #000;
+			font-weight: 500;
+			float:right
+		}
+		body{margin:0;padding:0}
+	</style>
+</head>
+<body style="width:100%; margin-top: 0px; padding-top: 0px; align-content:center">
+	<header class="am-header">
+		<h1>个人信息</h1>
+	</header>
+    <form id="form1" runat="server">
+		<div class="title">
+			<div class="left">会员号</div>
+			<div class="right" runat ="server"><%=sUserName%></div>
+		</div>
+        <div>
+			<p>开户行：*开户行名称及详细地址</p>
+			<p> <asp:TextBox  ID="Bank_Name" runat="server"  Height="24px"  Width="90%"></asp:TextBox></p>
+        </div>
+        <div>
+			<p>收款账号：</p>
+			<p> <asp:TextBox  ID="Bank_Acount" runat="server"  Height="24px"  Width="90%"></asp:TextBox></p>
+        </div>
+        <div>
+			<p>姓名：</p>
+			<p> <asp:TextBox  ID="TrueName" runat="server"  Height="24px" Width="221px"></asp:TextBox></p>
+        </div>
+        <div>
+			<p>身份证号：</p>
+			<p> <asp:TextBox  ID="IDNo" runat="server" Height="24px" Width="90%"></asp:TextBox></p>
+        </div>
+        <div>
+			<p>收货地址：</p>
+			<p> <asp:TextBox  ID="Home_Addr" runat="server" Height="24px" Width="90%"></asp:TextBox></p>
+        </div>
+        <div>
+			<p>联系电话：</p>
+			<p> <asp:TextBox  ID="Tel_No" runat="server" Height="24px" Width="226px" ></asp:TextBox></p>
+        </div>
+        <div class ="line_button">
+			<asp:Button  ID="comform_btn" runat="server" OnClick="comform_Click"  class="button10" Text="确 定" />
+        </div>
+
+<!--        <div class ="line_promit"><%=sPromit %> </div>-->
+    </form>
+</body>
+</html>
