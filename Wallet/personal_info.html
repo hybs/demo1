@@ -92,6 +92,7 @@
 		}
 		body{margin:0;padding:0}
 		#form1{padding:20px}
+		.line{border-bottom:1px solid #CCC;padding-bottom:10px}
 	</style>
 </head>
 <body style="width:100%; margin-top: 0px; padding-top: 0px; align-content:center">
@@ -105,27 +106,27 @@
 		</div>
         <div>
 			<p>开户行：*开户行名称及详细地址</p>
-			<p> <asp:TextBox  ID="Bank_Name" runat="server"  Height="24px"  Width="90%"></asp:TextBox></p>
+			<p class="line"> <asp:TextBox  ID="Bank_Name" runat="server"  Height="24px"  Width="90%"></asp:TextBox></p>
         </div>
         <div>
 			<p>收款账号：</p>
-			<p> <asp:TextBox  ID="Bank_Acount" runat="server"  Height="24px"  Width="90%"></asp:TextBox></p>
+			<p class="line"> <asp:TextBox  ID="Bank_Acount" runat="server"  Height="24px"  Width="90%"></asp:TextBox></p>
         </div>
         <div>
 			<p>姓名：</p>
-			<p> <asp:TextBox  ID="TrueName" runat="server"  Height="24px" Width="221px"></asp:TextBox></p>
+			<p class="line"> <asp:TextBox  ID="TrueName" runat="server"  Height="24px" Width="221px"></asp:TextBox></p>
         </div>
         <div>
 			<p>身份证号：</p>
-			<p> <asp:TextBox  ID="IDNo" runat="server" Height="24px" Width="90%"></asp:TextBox></p>
+			<p class="line"> <asp:TextBox  ID="IDNo" runat="server" Height="24px" Width="90%"></asp:TextBox></p>
         </div>
         <div>
 			<p>收货地址：</p>
-			<p> <asp:TextBox  ID="Home_Addr" runat="server" Height="24px" Width="90%"></asp:TextBox></p>
+			<p class="line"> <asp:TextBox  ID="Home_Addr" runat="server" Height="24px" Width="90%"></asp:TextBox></p>
         </div>
         <div>
 			<p>联系电话：</p>
-			<p> <asp:TextBox  ID="Tel_No" runat="server" Height="24px" Width="226px" ></asp:TextBox></p>
+			<p class="line"> <asp:TextBox  ID="Tel_No" runat="server" Height="24px" Width="226px" ></asp:TextBox></p>
         </div>
         <div class ="line_button">
 			<asp:Button  ID="comform_btn" runat="server" OnClick="comform_Click"  class="button10" Text="确 定" />
