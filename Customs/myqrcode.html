@@ -1,0 +1,80 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="MyQRCode.aspx.cs" Inherits="MyQRCode" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>我的二维码</title>
+	<script type="text/javascript" src="../Scripts/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../Scripts/jquery.qrcode.min.js"></script>
+	<style type="text/css">
+		#codeico {
+			position: fixed;
+			width: 30px;
+			height: 30px;
+			background: url(./1_meitu_1.png) no-repeat;
+		}
+	</style>
+</head>
+<body style="width:100%;  margin-top: 0px; padding-top: 0px; align-content:center">
+    <div style="text-align:center;margin-top:100px">
+        <div><img style="width:200px"src="images/qrcode.png"></div>
+        <p>扫描二维码下载商城</p>
+    </div>
+<!--    <h1>Qrcode</h1>
+	<div id="qrcode" style="width:100%; align-content:center"></div>
+	<div id="up" style="align-content:center"></div>
+		<div id="h">
+		<canvas id="myCanvas" width="400" height="400"></canvas>
+	</div>-->
+</body>
+<script type="text/javascript">
+	$(function () {
+		var url = "<%=ImageUrl%>";	//"这里填写你要生成二维码的东西";
+		//默认使用Canvas生成，并显示到图片
+		jQuery('#qrcode').qrcode({
+			render: "canvas",
+			width: 256,     //设置宽度
+			height: 256,     //设置高度
+			typeNumber: -1,      //计算模式
+			correctLevel: 2,
+			text: url
+		});
+		//从 canvas 提取图片 image
+		function convertCanvasToImage(canvas) {
+			//新Image对象，可以理解为DOM
+			var image = new Image();
+			// canvas.toDataURL 返回的是一串Base64编码的URL，当然,浏览器自己肯定支持
+			// 指定格式 PNG
+			image.src = canvas.toDataURL("image/png");
+			return image;
+		}
+		var mycanvas1 = document.getElementsByTagName('canvas')[0]; //获取网页中的canvas对象
+		//将转换后的img标签插入到html中
+		var qrimg = convertCanvasToImage(mycanvas1);
+		$('#qrcode').html("");//移除已生成的避免重复生成
+		$('#qrcode').append(qrimg);//imagQrDiv表示你要插入的容器id
+/*		$('#qrcode img').attr("id", "tulip");
+				 var canvas = document.getElementById("myCanvas");
+				 var ctx = canvas.getContext("2d");
+				 //图片
+				 var bkimg = new Image();
+				 bkimg.src = "../mainpage/image/四川大宗.jpg";		//'这里是你自定义的背景图';
+				 canvas.width = window.screen.availWidth;
+				 canvas.height = window.screen.availHeight;
+				 var qrimg1 = document.getElementById("tulip");
+				 bkimg.crossOrigin="*";
+				 bkimg.onload = function() { //必须等待图片加载完成
+					 ctx.drawImage(bkimg, 0, 0, 400, 400);/window.screen.availWidth, window.screen.availHeight); //绘制图像进行拉伸
+					 ctx.drawImage(qrimg1, 300, 300);//window.screen.availWidth/3,window.screen.availHeight/3);
+		//			 var srcImg = new Image();
+		//			 srcImg.src = canvas.toDataURL('images/png');
+		//			 $('#h').html("");//移除已生成的避免重复生成
+		//			 $('#h').append(srcImg);//imagQrDiv表示你要插入的容器id
+		//			 $('#h img').attr("width",'100%');
+		//			 $('#h img').attr("height",'100%');//imagQrDiv表示你要插入的容器id
+					 $('#qrcode').hide();
+				 }*/
+	});
+</script>
+</html>
