@@ -56,7 +56,7 @@
 .amountInput {
 	width: 6.3rem;
 	margin: 0 auto;
-	border-bottom: 1px solid #999;
+	border-bottom: 1px solid #ccc;
 	align-items: center;
 	justify-content: flex-start;
 }
