@@ -130,8 +130,8 @@
 	width: 6.22rem;
 	display: block;
 	margin: .96rem auto 0;
-/*	background: linear-gradient(90deg,#FFA359 0,#FF5C75 100%);*/
-	background:#f73e77;
+	background: linear-gradient(90deg,#FFA359 0,#FF5C75 100%);
+/*	background:#f73e77;*/
 	margin-bottom:20px;
 	font-size: .32rem;
 	color: #fff;
@@ -143,7 +143,7 @@
 	z-index: 1
 }
 
-/*.shadow {
+.shadow {
 	position: absolute;
 	top: 0;
 	left: 50%;
@@ -155,7 +155,7 @@
 	filter: blur(.1rem);
 	-webkit-filter: blur(.1rem);
 	z-index: 0
-}*/
+}
 
 .button-verification-code {
 	width: 1.54rem;
