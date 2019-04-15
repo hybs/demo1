@@ -6,15 +6,23 @@
  	<style type="text/css">
 		.toolbar {
 			-webkit-box-sizing: border-box;
-			position: fixed;
+/*			position: fixed;
 			top: 0;
-			left: 0;
+			left: 0;*/
 			z-index: 1000;
-			padding: 0 10px;
+/*			padding: 0 10px;*/
 			overflow: hidden;
 			width: 100%;
 			background: #FFFFFF; 
 		}
+		nav {border-bottom: 1px solid #ccc}
+		.goods_item {padding:8px 6px;margin:4px;background:white;border-radius:6px}
+		.goods_item .a1,.a2 {padding:2px 14px;border:1px #f73e77 solid;border-radius:15px;text-decoration:none}
+		.goods_item .a1 {color:#FE532A}
+		.goods_item .a2 {color:white;background:#FE532A}
+		.goods_info {width:60%;float:left}
+		.goods_info p {padding-left: 4px}
+		.goods_info small {color:gray}
 	</style>
 	<link rel="stylesheet" href="./css/common.css?v=-e7bb704"/>
 	<link rel="stylesheet" href="./css/main.css?v=-3a95a9a" />
@@ -43,7 +51,7 @@
 			</nav>
 			<div class="wrap">
 			  <div class="title">
-<!-- 				<p class="left">会员号</p> -->
+ 				<p class="left"></p> 
 				<div class="right" runat ="server"><%=sUserName%></div>
 			  </div>
 			</div>
@@ -75,7 +83,7 @@
 			  </div>
 			</div>
 		</div>
-		<div style =" width:100%;height:200px;"></div>
+<!--		<div style =" width:100%;height:200px;"></div>-->
 		<div style="background:white">
 			<img class="noticeImg" src="./images/banner.jpg" style =" width:100%;height:auto;" alt=""/>			
 			<img class="noticeImg" src="./images/notice.png" style ="width: 30px; height: 30px;vertical-align: middle" alt=""/>
@@ -88,55 +96,45 @@
 	    </div>
 		<div style="background:#eee;padding:4px 0">
 			<p class="itemTitle">商品专区</p>
-			<div style="padding:4px;margin:4px;background:white;border-radius:6px">
+			<div class="goods_item">
             	<div style="width:40%;float:left">
 					<a href ="./Commodity/Product/page/beihun.html?g=0100000000001001&b=C010100010001000">
                     	<img src="./Commodity/Product/Images/贝魂.jpg" alt="beihun" style="width:100%; vertical-align:middle"/>
                     </a>
                 </div>
-				<div style="width:60%;float:left">
-                	<p style="padding:4px">贝魂酒 16瓶 批发 单价 140元</p>
-                    <p style="padding:4px;color:#f73e77">现金价：2240元</p>
-                    <p style="text-align:right"><a style="padding:2px 4px;border:1px #f73e77 solid;color:#F06;border-radius:6px;text-decoration:none">立即抢购</a></p>
+				<div class="goods_info">
+                	<p>贝魂酒 16瓶</p>
+                    <p style="color:#FF3C4C">￥2240</p>
+					<p><small>库存：10000</small></p>
+                    <p style="text-align:right"><a class="a1">卖出</a>&nbsp;&nbsp;<a class="a2">买入</a></p>
                 </div>
                 <div style="clear:both"></div>
             </div>
-<!--			<div style="padding:4px;margin:4px;background:white;border-radius:6px">
-                <div style="width:40%;float:left">
-                	<a href ="./Commodity/product/page/yuanhe.aspx?g=0100000000001002&b=C010100010001000">
-                    	<img src="./Commodity/Product/Images/元和坊.jpg" alt="yuanhe" style="width:100%; vertical-align:middle"/>
-                    </a>
-				</div>
-				<div style="width:60%;float:left">
-                	<p style="padding:4px">元和坊 16瓶 批发 单价 140元</p>
-                    <p style="padding:4px;color:#f73e77">现金价：2240元</p>
-                    <p style="text-align:right"><a style="padding:2px 4px;border:1px #f73e77 solid;color:#F06;border-radius:6px;text-decoration:none">立即抢购</a></p>
-                </div>
-                <div style="clear:both"></div>
-            </div>-->
-			<div style="padding:4px;margin:4px;background:white;border-radius:6px">
+			<div class="goods_item">
             	<div style="width:40%;float:left">
 					<a href ="./Commodity/Product/page/honggu.html?g=0100000000001003&b=C010100010001000">
                     	<img src="./Commodity/Product/Images/红菇.jpg" alt="yuanhe" style="width:100%; vertical-align:middle"/>
                     </a>
 				</div>
-                <div style="width:60%;float:left">
-                	<p style="padding:4px">武当红菇 16袋 批发 单价 140元</p>
-                    <p style="padding:4px;color:#f73e77">现金价：2240元</p>
-                    <p style="text-align:right"><a style="padding:2px 4px;border:1px #f73e77 solid;color:#F06;border-radius:6px;text-decoration:none">立即抢购</a></p>
+                <div class="goods_info">
+                	<p>武当红菇 16袋</p>
+                    <p style="color:#FF3C4C">￥2240</p>
+					<p><small>库存：10000</small></p>
+                    <p style="text-align:right"><a class="a1">卖出</a>&nbsp;&nbsp;<a class="a2">买入</a></p>
                 </div>
                 <div style="clear:both"></div>
             </div>
-			<div style="padding:4px;margin:4px;background:white;border-radius:6px">
+			<div class="goods_item">
             	<div style="width:40%;float:left">
 					<a href ="./Commodity/Product/page/heimur.html?g=0100000000001004&b=C010100010001000">
                     	<img src="./Commodity/Product/Images/黑木耳.jpg" alt="yuanhe" style="width:100%; vertical-align:middle"/>
                     </a>
 				</div>
-                <div style="width:60%;float:left">
-					<p style="padding:4px">黄山黑木耳 16袋 批发 单价70元</p>
-                    <p style="padding:4px;color:#f73e77">现金价：1120元</p>
-                    <p style="text-align:right"><a style="padding:2px 4px;border:1px #f73e77 solid;color:#F06;border-radius:6px;text-decoration:none">立即抢购</a></p>
+                <div class="goods_info">
+					<p >黄山黑木耳 16袋</p>
+                    <p style="color:#FF3C4C">￥1120</p>
+					<p><small>库存：10000</small></p>
+                    <p style="text-align:right"><a class="a1">卖出</a>&nbsp;&nbsp;<a class="a2">买入</a></p>
                 </div>
                 <div style="clear:both"></div>
             </div>
