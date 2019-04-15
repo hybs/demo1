@@ -1,6 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="yuanhe.aspx.cs" Inherits="Commodity_Mulberry" %>
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable = yes" />
@@ -9,9 +7,6 @@
 		body {
 			padding: 0;
 			margin: 0;
-			background: url("images/bg.png") no-repeat;
-			background-size: 100% 100%;
-			position: absolute;
 		}
 
 		.toolbar {
@@ -25,6 +20,9 @@
 			width: 100%;
 			background: #FFFFFF;
 		}
+		.wholesale,.button05,.buy {
+			position: relative
+		}
 		.button05 {
 			display:block;
 			text-align: center;
@@ -36,23 +34,37 @@
 			border-radius: 2rem;
 			box-sizing: border-box;
 			z-index: 1;
-			background: #29B1FD;
+			background: linear-gradient(90deg,#FFA359 0,#FF5C75 100%);
 			margin: .5rem .5rem .5rem .5rem;
+		}
+		.shadow {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 5.68rem;
+			height: 1rem;
+			background: linear-gradient(90deg,rgba(255,163,89,1) 0,rgba(255,92,117,1) 100%);
+			border-radius: .55rem;
+			filter: blur(.1rem);
+			-webkit-filter: blur(.1rem);
+			z-index: 0
 		}
 		.buttonbar {
 			text-align: center;
 			font-size: 30px;
 			font-weight: 900;
 			width:100%;
-			height:60px;
+/*			height:60px;*/
 			color: #f00;
+			background: #fff;
 		}
 		.buy {
 			text-align: center;
 			font-size: 30px;
 			font-weight: 500;
 			width:50%;
-			height:50px;
+/*			height:50px;*/
 			color: #f00;
 			float: left;
 		}
@@ -61,35 +73,38 @@
 			font-size: 30px;
 			font-weight: 500;
 			width:50%;
-			height:50px;
+/*			height:50px;*/
 			color: #f00;
-			float: right;
+			float: left;
 		}
 	</style>
 	<link rel="stylesheet" href="../../css/common.css?v=-e7bb704" />
 	<link rel="stylesheet" href="../../css/main.css?v=-3a95a9a" />
 </head>
 <body style="width: 100%; margin-top: 0px; padding-top: 0px; align-content: center">
-	<form id="form1" runat="server" style="background-color: lightgray;">
-		<div style="width: 100%; margin: auto; background-color: white;">
+	<form id="form1" runat="server">
+<!--		<div style="width: 100%; margin: auto; background-color: white;">
 			<img src="../../Images/banner.jpg" alt="banner" style="width: 100%;" />
-		</div>
-		<div style="width: 100%; height: 5px;"></div>
+		</div>-->
 		<div style="width: 100%; margin: auto; background-color: white;">
 			<img src="../Images/元和坊.jpg" alt="元和坊" style="width: 100%;" />
 		</div>
-		<div style="width: 100%; height: 5px;"></div>
-		<div id="pkginfo" runat="server" style="width: 100%; margin: auto; background-color: white;"></div>
-		<div style="width: 100%; height: 5px;"></div>
+		<div style="height: 4px;background: #ccc"></div>
+		<div id="pkginfo" runat="server" style="width: 100%; margin: auto; background-color: white;padding: 8px">11111111111</div>
+		<div style="height: 4px;background: #ccc"></div>
 		<div class ="buttonbar">
 			<div class="wholesale">
 				<a href="../../trade/page/wholesale.aspx?g=0100000000001002&b=C010100010001000" id="wholesale" class="button05">批发</a>
+				<div class="shadow"></div>
 			</div>
 			<div class="buy">
 				<a href="../../trade/page/buyGoods.aspx?g=0100000000001002&b=C010100010001000" id="buy" class="button05">零购</a>
+				<div class="shadow"></div>
 			</div>
+			<div style="clear:both"></div>
 		</div>
-		<div style="width: 100%; height: 5px;"></div>
+		<div style="height: 4px;background: #ccc"></div>
+		<div style="padding:8px">这里是介绍内容</div>
 	</form>
 </body>
 </html>
