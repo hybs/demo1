@@ -7,9 +7,47 @@
     <title>用户登录</title>
 	<link rel="stylesheet" href="./css/common.css?v=-e7bb704"/>
 	<link rel="stylesheet" href="./css/login.css?v=-851d74e"/>
-
+	<style>
+		.am-header  {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			width: 100%;
+			position: relative;
+			padding: 0px;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			height: 50px;
+			text-align: center;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			left: 0px;
+			top: 0px;
+			border-bottom: 1px solid #eee;
+		}
+		.am-header img {
+			width: 12px;
+			vertical-align: middle;
+			padding-left: 8px;
+		}
+		.am-header h1 {
+			-webkit-box-flex: 1;
+			-ms-flex: 1;
+			line-height: 18px;
+			text-align: center;
+			font-size: 18px;
+			font-weight: 300;
+			color: #000;
+		}
+		.forget {margin-left: 20px}
+	</style>
 </head>
 <body style="width:100%; margin-top: 0px; padding-top: 0px; align-content:center">
+	<header class="am-header">
+		<a href="javascript:history.back(-1)"><img src="../images/back.png"></a>
+		<h1>用户登录</h1>
+	</header>
 	<form id="form1" runat="server">
 		<div class="wrap">
 			<nav style="opacity: 0">
@@ -21,8 +59,8 @@
 					<div class="navRight"></div>
 				</div>
 			</nav>
-			<img src="../images/logo.png?v=-5572384" class="logo" alt=""/>
-			<p class="appName">华东现货交易指定商品交易平台</p>
+<!--			<img src="../images/logo.png?v=-5572384" class="logo" alt=""/>
+			<p class="appName">华东现货交易指定商品交易平台</p>-->
 			<div class="item">
 				<span class="area">+86</span>
 				<asp:TextBox ID="nameText" runat="server" placeholder="只能使用您的手机号码"></asp:TextBox>
@@ -38,7 +76,7 @@
 			<div class="buttonBox">
 				<asp:Button class="button" ID="Button2" runat="server" OnClientClick="return checkClint()"  OnClick="Login_Click" Text="登录" />  
 				
-<!--				<div class="shadow"></div>-->
+				<div class="shadow"></div>
 			</div>
 			<div class="buttons">
 				<!--p class="register"><a href="./beforeRegister.html">快速注册</a></!--p>-->
