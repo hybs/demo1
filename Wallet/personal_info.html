@@ -14,7 +14,6 @@
 			padding: 0px;
 			-webkit-box-sizing: border-box;
 			box-sizing: border-box;
-			background: #f73e77;
 			height: 50px;
 			text-align: center;
 			-webkit-box-pack: center;
@@ -23,6 +22,12 @@
 			-ms-flex-align: center;
 			left: 0px;
 			top: 0px;
+			border-bottom: 1px solid #eee;
+		}
+		.am-header img {
+			width: 16px;
+			vertical-align: middle;
+			padding-left: 8px;
 		}
 		.am-header h1 {
 			-webkit-box-flex: 1;
@@ -31,7 +36,7 @@
 			text-align: center;
 			font-size: 18px;
 			font-weight: 300;
-			color: #fff;
+			color: #000;
 		}
 		.line_button {
 			text-align: center;
@@ -60,7 +65,7 @@
 			border-radius: 2rem;
 			box-sizing: border-box;
 			z-index: 1;
-			background: #f73e77;
+			background: linear-gradient(90deg,#FFA359 0,#FF5C75 100%);
 			margin: .96rem .96rem .96rem .96rem;
 		}
 		a, button {
@@ -97,6 +102,7 @@
 </head>
 <body style="width:100%; margin-top: 0px; padding-top: 0px; align-content:center">
 	<header class="am-header">
+		<a href="javascript:history.back(-1)"><img src="../images/back.png"></a>
 		<h1>个人信息</h1>
 	</header>
     <form id="form1" runat="server">
@@ -130,6 +136,7 @@
         </div>
         <div class ="line_button">
 			<asp:Button  ID="comform_btn" runat="server" OnClick="comform_Click"  class="button10" Text="确 定" />
+			<div class="shadow"></div>
         </div>
 
 <!--        <div class ="line_promit"><%=sPromit %> </div>-->

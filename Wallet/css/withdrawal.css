@@ -165,7 +165,7 @@
 	display: none
 }
 
-.button {
+/*.button {
 	width: 6.9rem;
 	display: block;
 	margin: .8rem auto 0;
@@ -177,6 +177,36 @@
 	line-height: .88rem;
 	border-radius: .44rem;
 	z-index: 1
+}*/
+
+.button {
+	width: 6.22rem;
+	display: block;
+	margin: .96rem auto 0;
+	background: linear-gradient(90deg,#FFA359 0,#FF5C75 100%);
+	margin-bottom:20px;
+	font-size: .32rem;
+	color: #fff;
+	text-align: center;
+	height: .88rem;
+	line-height: .88rem;
+	border-radius: .44rem;
+	box-sizing: border-box;
+	z-index: 1
+}
+
+.shadow {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 5.68rem;
+	height: 1rem;
+	background: linear-gradient(90deg,rgba(255,163,89,1) 0,rgba(255,92,117,1) 100%);
+	border-radius: .55rem;
+	filter: blur(.1rem);
+	-webkit-filter: blur(.1rem);
+	z-index: 0
 }
 
 .desc {
