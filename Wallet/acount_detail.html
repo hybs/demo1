@@ -14,13 +14,18 @@
 			padding: 7px 0;
 			-webkit-box-sizing: border-box;
 			box-sizing: border-box;
-			background: #f73e77;
 			height: 50px;
 			text-align: center;
 			-webkit-box-pack: center;
 			-ms-flex-pack: center;
 			-webkit-box-align: center;
 			-ms-flex-align: center;
+			border-bottom: 1px solid #eee;
+		}
+		.am-header img {
+			width: 12px;
+			vertical-align: middle;
+			padding-left: 8px;
 		}
 		.am-header h1 {
 			-webkit-box-flex: 1;
@@ -29,7 +34,7 @@
 			text-align: center;
 			font-size: 18px;
 			font-weight: 300;
-			color: #fff;
+			color: #000;
 		}
 		body {
 			font-size:12px;
@@ -53,6 +58,7 @@
 </head>
 <body>
 	<header class="am-header">
+		<a href="javascript:history.back(-1)"><img src="../images/back.png"></a>
 		<h1>账单明细</h1>
 	</header>
     <form id="form1" runat="server">
