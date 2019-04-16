@@ -25,9 +25,9 @@
 	font-weight: 500
 }
 
-.qrCode {
+/*.qrCode {
 	margin-right: .1rem
-}
+}*/
 
 .qrCode, .service {
 	height: .88rem;

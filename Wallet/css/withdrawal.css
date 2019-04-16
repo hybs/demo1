@@ -30,7 +30,8 @@
 	height: 1.1rem;
 	line-height: 1.1rem;
 	font-size: .48rem;
-	color: #000
+	color: #000;
+	margin-left: 6px;
 }
 
 .amountBox {
@@ -86,7 +87,7 @@
 
 .allAmount {
 	font-size: .24rem;
-	color: #f73e77
+/*	color: #f73e77*/
 }
 
 .item > input, .itemTitle, .itemValue {
