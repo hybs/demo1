@@ -40,7 +40,7 @@
 		
 		
 		
-		ul {
+/*		ul {
             margin: 0;
             padding: 0;
 
@@ -103,7 +103,17 @@
         }
         input[type="radio"]:checked ~ .tab-box {
             z-index: 5;
-        }
+        }*/
+		
+		body{margin:0;padding: 0;background: #eee}
+		.title {border-bottom: 1px solid #eee;background: #fff}
+		.title img {width:8px;}
+		.title .div_left {float: left; padding: 8px}
+		.title .div_center {text-align: center;font-size: 18px;padding: 4px}
+		ul {list-style: none;padding: 0;margin: 10px 20px;font-size: 13px}
+		ul li {float: left;margin-right: 20px;line-height: 20px}
+		ul li a {text-decoration: none;color: #000;padding-bottom: 3px}
+		ul li .checked {font-size: 18px;border-bottom: 2px solid #000}
 	</style>
 	<script>
 		 function checkClint()
@@ -132,21 +142,27 @@
 	</script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<div class="title">
+		<div class="div_left"><img src="../images/back.png"></div>
+		<div class="div_center">交易管理</div>
+	</div>
     <div id="main" style="font-size:18px; font-family:Verdana; width:100%">
         <ul class="tab-list clearfloat">
             <li class="tab-itom">
-                <input type="radio" id="testTabRadio1" class="test-radio" name="tab" checked="checked">
+				<a href="" class="checked">锁单中</a>
+<!--                <input type="radio" id="testTabRadio1" class="test-radio" name="tab" checked="checked">
                 <label class="test-label" for="testTabRadio1">锁单中</label>
                 <div class="tab-box"><br>
-                    <div class="btn">锁单中</div>
+                    <div class="btn">锁仓单</div>
                     <div id ="lockgoodslist"  runat="server" style="text-align:center;margin-top:30px">
                         <img src="./images/no.png" />
                         <p>暂无仓单</p>
                     </div>
-                </div>
+                </div>-->
             </li>
             <li class="tab-itom">
-                <input type="radio" id="testTabRadio2" class="test-radio" name="tab">
+				<a href="">可挂卖</a>
+<!--                <input type="radio" id="testTabRadio2" class="test-radio" name="tab">
                 <label class="test-label" for="testTabRadio2">可挂卖</label>
                 <div class="tab-box"><br>
                     <div class="btn">可挂卖</div>
@@ -154,11 +170,11 @@
                         <img src="./images/no.png" />
                         <p>暂无可挂卖仓单</p>
                     </div>
-
-                </div>
+                </div>-->
             </li>
             <li class="tab-itom">
-                <input type="radio" id="testTabRadio3" class="test-radio" name="tab">
+				<a href="">买入明细</a>
+<!--                <input type="radio" id="testTabRadio3" class="test-radio" name="tab">
                 <label class="test-label" for="testTabRadio3">买入明细</label>
                 <div class="tab-box"><br>
                     <div class="btn">买入明细</div>
@@ -166,10 +182,11 @@
                         <img src="./images/no.png" />
                         <p>暂无记录</p>
                     </div>
-                </div>
+                </div>-->
             </li>
             <li class="tab-itom">
-                <input type="radio" id="testTabRadio4" class="test-radio" name="tab">
+				<a href="">卖出明细</a>
+<!--                <input type="radio" id="testTabRadio4" class="test-radio" name="tab">
                 <label class="test-label" for="testTabRadio4">卖出明细</label>
                 <div class="tab-box"><br>
                     <div class="btn">卖出明细</div>
@@ -177,7 +194,7 @@
                         <img src="./images/no.png" />
                         <p>暂无记录</p>
                     </div>
-                </div>
+                </div>-->
             </li>
         </ul>
     </div>
