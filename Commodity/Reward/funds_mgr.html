@@ -71,7 +71,6 @@
 /*			height:50px;*/
 			color: #f00;
 /*			margin-top:30px;*/
-			border-bottom: 1px solid #eee;
 			padding: 8px;
 		}
 		.button05 {
@@ -121,7 +120,6 @@
 			font-weight: 500;
 /*			text-indent: 8px;*/
 			padding: 8px;
-			border-bottom: 1px solid #eee;
 /*			width:50%;*/
 /*			height:50px;*/
 /*			float: left;*/
@@ -132,7 +130,6 @@
 			font-weight: 500;
 /*			text-indent: 8px;*/
 			padding: 8px;
-			border-bottom: 1px solid #eee;
 /*			width:50%;*/
 /*			height:50px;*/
 /*			float: right;*/
@@ -141,8 +138,8 @@
 			cursor: pointer;
 			text-decoration: none
 		}
+		.line_button,.recharge, .withdraw{border-bottom: 1px solid #cecece;}
 		.num {display: block;font-size:50px; text-align: left;padding: 10px;}
-		#btn_acount_detail {text-decoration: none;color: #fff}
 		.img1 {width:24px}
 		.img2 {width: 8px;}
 		img {vertical-align: middle}
@@ -155,7 +152,7 @@
 	<header class="am-header">
 		<a href="javascript:history.back(-1)"><img src="../../images/back2.png"></a>
 		<h1>资金管理</h1>
-		<a href="../../Wallet/acount_detail.html" id="btn_acount_detail">明细&nbsp;&nbsp;</a>
+<!--		<a href="../../Wallet/acount_detail.html" id="btn_acount_detail">明细&nbsp;&nbsp;</a>-->
 	</header>
     <form id="form1" runat="server">
 <!--		<div style="width:100%;height:20px"></div>-->
@@ -209,9 +206,16 @@
 				</a>
 				<div style="clear: both"></div>
 			</div>
-	<!--		<div class="line_button">
-				<a href="../../Wallet/acount_detail.html" id="btn_acount_detail" class="button10">账 务 明 细</a>
-			</div>-->
+			<div class="line_button">
+				<a href="../../Wallet/acount_detail.html" id="btn_acount_detail" class="button10">
+					<div class="left">
+						<img class="img1" src="../../images/mx.png">
+						<span>账 务 明 细</span>
+					</div>
+					<div class="right"><img class="img2" src="../../images/back3.png"></div>
+				</a>
+				<div style="clear: both"></div>
+			</div>
 			<div class="line_button">
 				<a href="../../Entrance/updatepassword.html" id="btn_change_password" class="button10">
 					<div class="left">
