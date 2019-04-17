@@ -84,6 +84,14 @@
 			text-decoration:none
 		}
 	
+		table {width: 100%;text-align: center;font-size: 13px}
+		table thead {font-weight: bold}
+		table td {width:20%}
+		table tbody tr td:nth-child(1) {color:red}
+		table tbody tr td:nth-child(3) {color:red}
+		table tbody tr td:nth-child(4) {color:red}
+	    table,td {border: 1px solid #eee}
+	
 		ul {list-style: none;margin:0;padding: 0}
 		ul li {padding: 10px;border-bottom: 1px solid #eee}
 		ul li div{float:left}
@@ -92,12 +100,7 @@
 		ul li div:nth-child(2) {padding-left: 10px}
 		ul li small {color:gray;display: block}
 	
-		table {width: 100%;text-align: center;font-size: 13px}
-		table thead {font-weight: bold}
-		table td {width:20%}
-		table tbody tr td:nth-child(1) {color:red}
-		table tbody tr td:nth-child(3) {color:red}
-		table tbody tr td:nth-child(4) {color:red}
+		.div_text {font-size: 13px;margin-top:5px}
 	</style>
 	<link rel="stylesheet" href="../../css/common.css?v=-e7bb704" />
 	<link rel="stylesheet" href="../../css/main.css?v=-3a95a9a" />
@@ -127,9 +130,11 @@
 					</tr>
 				</tbody>
 			</table>
-			<div>每买入16个仓单，送1个赠品单，6个赠品单兑换一个产品，每 1 个仓单兑换一个产品。</div>
-			<div>产品零售价：300元，折扣率：0.8。</div>
-			<div>赠送积分：130 分。</div>
+			<div class="div_text">
+				<div>每买入16个仓单，送1个赠品单，6个赠品单兑换一个产品，每1个仓单兑换一个产品。</div>
+				<div>产品零售价：300元，折扣率：0.8。</div>
+				<div>赠送积分：130分。</div>
+			</div>
 		</div>
 		<div style="height: 1px;background: #eee"></div>
 		<div class ="buttonbar">
@@ -212,7 +217,7 @@
 					<a href="./yuanhe.html?g=0100000000001001&b=C010100010001000">
 						<div><img src="../Images/元和坊.jpg"></div>
 						<div>
-							<div>元和坊 16瓶</div>
+							<div>元和坊 16单</div>
 							<small>库存：10000</small>
 						</div>
 						<hr style="border:none;clear: both">
@@ -222,7 +227,7 @@
 					<a href ="./honggu.html?g=0100000000001003&b=C010100010001000">
 						<div><img src="../Images/红菇.jpg"></div>
 						<div>
-							<div>武当红菇 16袋</div>
+							<div>武当红菇 16单</div>
 							<small>库存：10000</small>
 						</div>
 						<hr style="border:none;clear: both">
@@ -232,7 +237,7 @@
 					<a href ="./heimur.html?g=0100000000001004&b=C010100010001000">
 						<div><img src="../Images/黑木耳.jpg"></div>
 						<div>
-							<div>黄山黑木耳 16袋</div>
+							<div>黄山黑木耳 16单</div>
 							<small>库存：10000</small>
 						</div>
 						<hr style="border:none;clear: both">
