@@ -3,7 +3,7 @@
 <head>
 	<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable = yes" />
 	<title>盈贝商城</title>
-<style type="text/css">
+	<style type="text/css">
 		body {
 			padding: 0;
 			margin: 0;
@@ -41,6 +41,14 @@
 			background: linear-gradient(90deg,#FFA359 0,#FF5C75 100%);
 			margin: .5rem .5rem .5rem .5rem;
 		}
+		.buttonbar {
+			text-align: center;
+			font-size: 30px;
+			font-weight: 900;
+			width:100%;
+/*			height:60px;*/
+			color: #f00;
+		}
 		.shadow {
 			position: absolute;
 			top: 0;
@@ -53,14 +61,6 @@
 			filter: blur(.1rem);
 			-webkit-filter: blur(.1rem);
 			z-index: 0
-		}
-		.buttonbar {
-			text-align: center;
-			font-size: 30px;
-			font-weight: 900;
-			width:100%;
-/*			height:60px;*/
-			color: #f00;
 		}
 		.buy {
 			text-align: center;
@@ -83,15 +83,15 @@
 		a {
 			text-decoration:none
 		}
-	
+		
 		table {width: 100%;text-align: center;font-size: 13px}
 		table thead {font-weight: bold}
 		table td {width:20%}
 		table tbody tr td:nth-child(1) {color:red}
 		table tbody tr td:nth-child(3) {color:red}
 		table tbody tr td:nth-child(4) {color:red}
-	    table,td {border: 1px solid #eee}
-	
+		table,td {border: 1px solid #eee}
+		
 		ul {list-style: none;margin:0;padding: 0}
 		ul li {padding: 10px;border-bottom: 1px solid #eee}
 		ul li div{float:left}
@@ -99,7 +99,7 @@
 		ul li a {text-decoration: none;color:#000}
 		ul li div:nth-child(2) {padding-left: 10px}
 		ul li small {color:gray;display: block}
-	
+		
 		.div_text {font-size: 13px;margin-top:5px}
 	</style>
 	<link rel="stylesheet" href="../../css/common.css?v=-e7bb704" />
@@ -108,11 +108,10 @@
 <body>
 	<form id="form1" runat="server" style="background-color: white;margin:0;padding:0">
 <!--		<div style="width: 100%; margin: auto; background-color: white;">
-			<img src="../../../Images/banner.jpg" alt="banner" style="width: 100%;" />
-		</div>
-		<div style="width: 100%; height: 5px;"></div>-->
-		<div style="width: 100%; margin: auto; background-color: white">
-			<img src="../Images/贝魂.jpg" alt="贝魂酒" style="width: 100%;" />
+			<img src="../../Images/banner.jpg" alt="banner" style="width: 100%;" />
+		</div>-->
+		<div style="width: 100%; margin: auto; background-color: white;">
+			<img src="../Images/元和坊.jpg" alt="元和坊" style="width: 100%;" />
 		</div>
 		<div id="pkginfo" runat="server" style="margin: auto; background-color: white;padding: 8px">
 			<table>
@@ -123,101 +122,38 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td>16</td><td>买入价</td><td>140</td><td>2240</td><td>会员买入价</td>
+						<td>16</td><td>买入价</td><td>280</td><td>4480</td><td>会员买入价</td>
 					</tr>
 					<tr>
-						<td>16</td><td>买出价</td><td>150</td><td>2400</td><td>会员卖出价</td>
+						<td>16</td><td>买出价</td><td>300</td><td>4800</td><td>会员卖出价</td>
 					</tr>
 				</tbody>
 			</table>
 			<div class="div_text">
 				<div>每买入16个仓单，送1个赠品单，6个赠品单兑换一个产品，每1个仓单兑换一个产品。</div>
-				<div>产品零售价：300元，折扣率：0.8。</div>
-				<div>赠送积分：130分。</div>
+				<div>产品零售价：600元，折扣率：0.8。</div>
+				<div>赠送积分：260分。</div>
 			</div>
 		</div>
-		<div style="height: 1px;background: #eee"></div>
+		<div style="height:1px;background:#eee"></div>
 		<div class ="buttonbar">
 			<div class="wholesale">
-				<a href="../../trade/page/wholesale.aspx?g=0100000000001001&b=C010100010001000" id="wholesale" class="button05">批发</a>
+				<a href="../../trade/page/wholesale.aspx?g=0100000000001002&b=C010100010001000" id="wholesale" class="button05">批发</a>
 				<div class="shadow"></div>
 			</div>
 			<div class="buy">
-				<a href="../../trade/page/buyGoods.aspx?g=0100000000001001&b=C010100010001000" id="buy" class="button05">零购</a>
+				<a href="../../trade/page/buyGoods.aspx?g=0100000000001002&b=C010100010001000" id="buy" class="button05">零购</a>
 				<div class="shadow"></div>
 			</div>
-			<div style="clear: both"></div>
 		</div>
-		<div style="height: 1px;background: #eee"></div>
-		<div>
-<!--			<div>
-				<span>
-					都说茅台酒有独特的酿造工艺，到底有哪些独门秘籍呢？
-
-					从宏观来讲它有三大之最
-
-					酿造周期是世界上最长的酒
-
-					耗费粮食是世界上最多的酒
-
-					香味物质是世界上最多的酒
-				</span>
-				</div>
-			<div>
-				<span>
-					 一、 整粒发酵：世界上罕见原料不压榨、不磨碎，几乎整粒高粱投料开始参与发酵，只有20%破碎率，所以高粱称为沙，故有“端午制曲、重阳下沙”之说。当地人将此类坚守传统酱香工艺的酒为“坤沙”，即整粒高粱发酵的酒。故高粱必须是粒小皮厚的赤水河流域红缨子高粱，此类高粱呈现低头谦卑的君子之姿。整粒发酵，这是独门秘籍第一招。
-				</span>
-			</div>
-			<div>
-				<span>
-					二、 整年发酵：茅台酒整个酿造周期历经春、夏、秋、冬一年之久，一年里只有最初的两次投料，分别是下沙工艺、糙沙工艺。茅台酒九次蒸煮，最开始的两次蒸煮就是下沙和糙沙，将高粱蒸熟，其后每次混合曲药进行发酵，一粒高粱经历了漫长的涅磐重生。因为是整粒，所以才能历时整年发酵。整年发酵，这是独门秘籍的第二招。
-				</span>
-			</div>
-			<div>
-				<span>
-					三、 阴阳发酵：茅台酒采取独特的两种发酵结合的方式。核心是堆积发酵，属于有氧发酵，招揽空气中的微生物进行开放式发酵，其主要香味物质就是这个过程中产生的。所以茅台酒的酿造车间里，常常有小山丘一样的堆子，实际上是赤水河谷看不见的微生物小精灵在施展魔法。其次才是入池发酵，属于无氧发酵，一般酿酒师伸手感受堆子的温度到了，就从堆子返入石头砌成的发酵池。正因为微生物的神奇，生态环境的依赖，茅台酒方能不可复制，稀缺在所难免，自然物以稀为贵，备受追捧了。至今，赤水河是全国唯一的原生态长江支流，弥足珍贵。阴阳发酵，这是独门秘籍第三招。
-				</span>
-			</div>
-			<div>
-				<span>
-					四、 七次精酿：茅台酒九次蒸煮、八次发酵、七次取酒，最终形成七个轮次基酒，每轮次基酒风格迥异、度数差别，再将每轮次区分酱香、醇甜、窖底三种典型体。最终形成多达100种基酒组合，才有神水的传奇。毛泽东就曾问：茅台酒是用什么神水搞的哟，那么香，那么美？七次精酿像七个音符，每个音符代表不同风格的基酒，最后组成一首优美的曲子，歌有天籁之音，酒有浑然天成。七次精酿，这次独门秘籍的第四招。
-				</span>
-			</div>
-			<div>
-				<span>
-					五、 三年贮存：茅台基酒会放入陶坛进行漫长的贮存，新酒刚出，酸甜苦涩，实属难饮，如年少轻狂，经过三年以上历练，思想醇厚了、举止幽雅了、感情细腻了、言辞悠长了、魅力留香了。这是茅台酒基酒经历的生命蜕变，人如此，酒如此，卓越必经过岁月寂静的磨练。三年贮存，这是独门秘籍的第五招。
-				</span>
-			</div>
-			<div>
-				<span>
-					六、 以酒勾酒：茅台基酒根据不同轮次、不同酒龄、不同典型体、不同酒度，最终形成多达100种基酒组合。因为度数各异，最终不用添加其他酒品常用的“加浆降度”工艺。因为风格迥异，方能不需要添加香味香气物质。勾兑大师通过小型勾兑确定比例、大型勾兑形成成品，其间少不了老酒点化，最后经过品酒师集体品评等品控程序，达到茅台酒“幽雅细腻”的标准品质，方能出厂。以酒勾酒，这是独门秘籍第六招。
-				</span>
-			</div>
-			<div>
-				<span>
-					七、 五年出厂：茅台酒从原料到成品，至少历时5年以上。这五年是一粒高粱的凤凰涅槃。如果把一个人的五年折算成小时，除去休闲和休息，恰恰只有10000小时。《异数》指出：人们眼中的天才之所以卓越非凡，并非天资超人一等，而是付出了持续不断的努力；只要经过1万小时的锤炼，任何人都能从平凡变成超凡；要成为某个领域的专家，需要10000小时。30道工序，165个工艺环节，五年茅台，十足匠心。五年出厂，这是独门秘籍的第七招。
-				</span>
-			</div>
-			<div>
-				<span>
-					除去七招秘籍，还有比较专业说法：
-					三高三低三长等特殊酿造工艺，即高温制曲、高温摘酒、高温堆积，投料水分低、曲糖化低、出酒率低，用曲量多、轮次多、耗粮多，制曲时间长、生产周期长、储藏时间长。
-				</span>
-			</div>
-			<div>
-				<span>
-					以及十大工艺之说:
-
-					一年一个生产周期；两次投料、两种发酵；三种典型体：醇甜、窖底、酱香，以及“三高”工艺：高温制曲，高温堆积、高温接酒；四十天制曲发酵；五月端午制曲；六个月存曲；七次取酒；八次发酵；九次蒸煮；十种独特工艺。
-				</span>
-			</div>-->
-			
+		<div style="height:1px;background:#eee;clear: both"></div>
+		<div style="padding:8px">
 			<ul>
 				<li>
-					<a href="./yuanhe.html?g=0100000000001001&b=C010100010001000">
-						<div><img src="../Images/元和坊.jpg"></div>
+					<a href ="./beihun.html?g=0100000000001004&b=C010100010001000">
+						<div><img src="../Images/贝魂.jpg"></div>
 						<div>
-							<div>元和坊 16单</div>
+							<div>贝魂酒 16单</div>
 							<small>库存：10000</small>
 						</div>
 						<hr style="border:none;clear: both">
