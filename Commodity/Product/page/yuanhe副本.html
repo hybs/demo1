@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable = yes" />
+	<title>盈贝商城</title>
+	<style type="text/css">
+		body {
+			padding: 0;
+			margin: 0;
+/*			background: url("images/bg.png") no-repeat;
+			background-size: 100% 100%;*/
+			position: absolute;
+		}
+
+		.toolbar {
+			-webkit-box-sizing: border-box;
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			z-index: 1000;
+			padding: 0 10px;
+			overflow: hidden;
+			width: 100%;
+			background: #FFFFFF;
+		}
+		.wholesale,.button05,.buy {
+			position: relative
+		}
+		.button05 {
+			display:block;
+			text-align: center;
+			font-size: 24px;
+			font-weight: 500;
+			width:80%;
+			height:40px;
+			line-height:40px;
+			color: #fff;
+			border-radius: 2rem;
+			box-sizing: border-box;
+			z-index: 1;
+			background: linear-gradient(90deg,#FFA359 0,#FF5C75 100%);
+			margin: .5rem .5rem .5rem .5rem;
+		}
+		.buttonbar {
+			text-align: center;
+			font-size: 30px;
+			font-weight: 900;
+			width:100%;
+/*			height:60px;*/
+			color: #f00;
+		}
+		.shadow {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 5.68rem;
+			height: 1rem;
+			background: linear-gradient(90deg,rgba(255,163,89,1) 0,rgba(255,92,117,1) 100%);
+			border-radius: .55rem;
+			filter: blur(.1rem);
+			-webkit-filter: blur(.1rem);
+			z-index: 0
+		}
+		.buy {
+			text-align: center;
+			font-size: 30px;
+			font-weight: 500;
+			width:50%;
+/*			height:50px;*/
+			color: #f00;
+			float: left;
+		}
+		.wholesale {
+			text-align: center;
+			font-size: 30px;
+			font-weight: 500;
+			width:50%;
+/*			height:50px;*/
+			color: #f00;
+			float: right;
+		}
+		a {
+			text-decoration:none
+		}
+		
+		table {width: 100%;text-align: center;font-size: 13px}
+		table thead {font-weight: bold}
+		table td {width:20%}
+		table tbody tr td:nth-child(1) {color:red}
+		table tbody tr td:nth-child(3) {color:red}
+		table tbody tr td:nth-child(4) {color:red}
+		table,td {border: 1px solid #eee}
+		
+		ul {list-style: none;margin:0;padding: 0}
+		ul li {padding: 10px;border-bottom: 1px solid #eee}
+		ul li div{float:left}
+		ul li img {width:64px}
+		ul li a {text-decoration: none;color:#000}
+		ul li div:nth-child(2) {padding-left: 10px}
+		ul li small {color:gray;display: block}
+		
+		.div_text {font-size: 13px;margin-top:5px}
+	</style>
+	<link rel="stylesheet" href="../../css/common.css?v=-e7bb704" />
+	<link rel="stylesheet" href="../../css/main.css?v=-3a95a9a" />
+</head>
+<body>
+	<form id="form1" runat="server">
+<!--		<div style="width: 100%; margin: auto; background-color: white;">
+			<img src="../../Images/banner.jpg" alt="banner" style="width: 100%;" />
+		</div>-->
+		<div style="width: 100%; margin: auto; background-color: white;">
+			<img src="../Images/元和坊.jpg" alt="元和坊" style="width: 100%;" />
+		</div>
+		<div id="pkginfo" runat="server" style="margin: auto; background-color: white;padding: 8px">
+			<table>
+				<thead>
+					<tr>
+						<td>每手仓单数</td><td>价格类型</td><td>单价(元)</td><td>总价(元)</td><td>备注</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>16</td><td>买入价</td><td>280</td><td>4480</td><td>会员买入价</td>
+					</tr>
+					<tr>
+						<td>16</td><td>买出价</td><td>300</td><td>4800</td><td>会员卖出价</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="div_text">
+				<div>每买入16个仓单，送1个赠品单，6个赠品单兑换一个产品，每1个仓单兑换一个产品。</div>
+				<div>产品零售价：600元，折扣率：0.8。</div>
+				<div>赠送积分：260分。</div>
+			</div>
+		</div>
+		<div style="height:1px;background:#eee"></div>
+		<div class ="buttonbar">
+			<div class="wholesale">
+				<a href="../../trade/page/wholesale.aspx?g=0100000000001002&b=C010100010001000" id="wholesale" class="button05">批发</a>
+				<div class="shadow"></div>
+			</div>
+			<div class="buy">
+				<a href="../../trade/page/buyGoods.aspx?g=0100000000001002&b=C010100010001000" id="buy" class="button05">零购</a>
+				<div class="shadow"></div>
+			</div>
+		</div>
+		<div style="height:1px;background:#eee;clear: both"></div>
+		<div style="padding:8px">
+			<ul>
+				<li>
+					<a href ="./beihun.html?g=0100000000001004&b=C010100010001000">
+						<div><img src="../Images/贝魂.jpg"></div>
+						<div>
+							<div>贝魂酒 16单</div>
+							<small>库存：10000</small>
+						</div>
+						<hr style="border:none;clear: both">
+					</a>
+				</li>
+				<li>
+					<a href ="./honggu.html?g=0100000000001003&b=C010100010001000">
+						<div><img src="../Images/红菇.jpg"></div>
+						<div>
+							<div>武当红菇 16单</div>
+							<small>库存：10000</small>
+						</div>
+						<hr style="border:none;clear: both">
+					</a>
+				</li>
+				<li>
+					<a href ="./heimur.html?g=0100000000001004&b=C010100010001000">
+						<div><img src="../Images/黑木耳.jpg"></div>
+						<div>
+							<div>黄山黑木耳 16单</div>
+							<small>库存：10000</small>
+						</div>
+						<hr style="border:none;clear: both">
+					</a>
+				</li>
+			</ul>
+		</div>
+	</form>
+</body>
+</html>
